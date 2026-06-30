@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TwentyThreeHundred — PMO Delivery, Training &amp; Data for Government</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange: #D9670B;
+    --orange-dark: #B8530A;
+    --ink: #1C2B33;
+    --slate: #5B6B73;
+    --bg: #F7F5F1;
+    --card: #FFFFFF;
+    --line: #E4DFD5;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  :focus-visible{
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 18px 24px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo-mark{
+    width:38px; height:38px;
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--serif);
+    font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1rem;
+    border-radius: 3px;
+  }
+  .logo-text{
+    font-family: var(--serif);
+    font-weight:600;
+    font-size: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  nav a{
+    text-decoration:none;
+    color: var(--ink);
+    font-weight:500;
+    font-size: 0.95rem;
+    margin-left: 32px;
+  }
+  nav a:hover{ color: var(--orange-dark); }
+  .nav-cta{
+    background: var(--orange);
+    color: #fff !important;
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-weight:600;
+  }
+  .nav-cta:hover{ background: var(--orange-dark); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 88px 0 72px;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow{
+    font-size: 0.8rem;
+    font-weight:600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange-dark);
+    margin-bottom: 18px;
+  }
+  h1{
+    font-family: var(--serif);
+    font-size: 2.85rem;
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+  }
+  .hero p.lede{
+    font-size: 1.15rem;
+    color: var(--slate);
+    max-width: 46ch;
+    margin-bottom: 32px;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding: 13px 24px;
+    border-radius: 4px;
+    font-weight:600;
+    font-size: 0.95rem;
+    text-decoration:none;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-primary{
+    background: var(--orange);
+    color: #fff;
+  }
+  .btn-primary:hover{ background: var(--orange-dark); }
+  .btn-secondary{
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--line);
+  }
+  .btn-secondary:hover{ border-color: var(--ink); }
+
+  /* Three-principle device — the signature element */
+  .principles{
+    display:flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: 6px;
+    overflow:hidden;
+  }
+  .principle{
+    padding: 22px 26px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    padding-left: 30px;
+  }
+  .principle:last-child{ border-bottom:none; }
+  .principle::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width: 5px;
+  }
+  .principle:nth-child(1)::before{ background: var(--orange); }
+  .principle:nth-child(2)::before{ background: var(--ink); }
+  .principle:nth-child(3)::before{ background: var(--slate); }
+  .principle-label{
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .principle-sub{
+    font-size: 0.88rem;
+    color: var(--slate);
+  }
+
+  /* ---------- Credibility strip ---------- */
+  .credibility{
+    background: var(--ink);
+    color: #fff;
+    padding: 28px 0;
+  }
+  .credibility .wrap{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .credibility-text{
+    font-family: var(--serif);
+    font-size: 1.05rem;
+  }
+  .credibility-text strong{
+    color: var(--orange);
+  }
+  .credibility-meta{
+    font-size: 0.85rem;
+    color: #C7CDD1;
+  }
+
+  /* ---------- Section shared ---------- */
+  section{ padding: 80px 0; }
+  .section-head{
+    max-width: 60ch;
+    margin-bottom: 48px;
+  }
+  .section-eyebrow{
+    font-size: 0.8rem;
+    font-weight:600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange-dark);
+    margin-bottom: 12px;
+  }
+  h2{
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .section-head p{
+    color: var(--slate);
+    font-size: 1.05rem;
+  }
+
+  /* ---------- About ---------- */
+  .about{ background: var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .about-grid p{
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  .about-grid p:last-child{ margin-bottom:0; }
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .service-card{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .service-number{
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--orange-dark);
+    font-weight:600;
+    padding: 22px 24px 0;
+  }
+  .service-card h3{
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight:600;
+    padding: 8px 24px 0;
+    margin-bottom: 10px;
+  }
+  .service-card p{
+    padding: 0 24px;
+    color: var(--slate);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  .service-card p:last-of-type{ margin-bottom: 24px; }
+  .service-tags{
+    padding: 0 24px 24px;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top: auto;
+  }
+  .tag{
+    font-size: 0.78rem;
+    font-weight:500;
+    color: var(--slate);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background: var(--ink);
+    color: #fff;
+  }
+  .contact .section-eyebrow{ color: #F2A65A; }
+  .contact h2{ color: #fff; }
+  .contact .section-head p{ color: #C7CDD1; }
+  .contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-card{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 28px;
+  }
+  .contact-card h3{
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    font-weight:600;
+  }
+  .contact-card address{
+    font-style: normal;
+    color: #C7CDD1;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+  .contact-meta{
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.85rem;
+    color: #9AA5AB;
+  }
+  .contact .btn-primary{
+    margin-top: 8px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 28px 0;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  footer p{
+    color: #9AA5AB;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .hero-inner, .about-grid, .contact-grid{
+      grid-template-columns: 1fr;
+    }
+    .services-grid{
+      grid-template-columns: 1fr;
+    }
+    h1{ font-size: 2.2rem; }
+    nav a:not(.nav-cta){ display:none; }
+    .credibility .wrap{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner wrap" style="padding-left:0; padding-right:0;">
+    <div class="logo">
+      <div class="logo-mark">T3</div>
+      <div class="logo-text">TwentyThreeHundred</div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">PMO Delivery &amp; Data for Government</div>
+      <h1>Helping PMO service providers cut cost and lift productivity.</h1>
+      <p class="lede">We work with PMO service providers to Government, combining delivery coaching, business analysis and data visualisation to turn fragmented project information into decisions you can act on.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start a conversation</a>
+        <a href="#services" class="btn btn-secondary">See our services</a>
+      </div>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <div class="principle-label">Maximising Flow</div>
+        <div class="principle-sub">Removing friction from delivery so work moves at pace.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Elevating Constraints</div>
+        <div class="principle-sub">Finding and fixing the bottleneck that limits everything else.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Avoiding Chaos</div>
+        <div class="principle-sub">Reliable management information, not guesswork.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="credibility">
+  <div class="wrap">
+    <div class="credibility-text"><strong>60+ years</strong> combined experience in portfolio delivery and management for Civil Service clients.</div>
+    <div class="credibility-meta">Cheltenham &amp; London</div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">About us</div>
+      <h2>A vibrant SME built on Civil Service delivery experience.</h2>
+    </div>
+    <div class="about-grid">
+      <p>TwentyThreeHundred is a vibrant SME based in Cheltenham and London. We enable PMO service providers to Government to drive down costs and drive up productivity through innovative training delivery, data analysis and reporting.</p>
+      <p>The founders have spent over 60 years working in portfolio delivery and management for Civil Service clients — experience that shapes every workshop, every piece of analysis, and every dashboard we build. Our aim is always to visualise the message, and to help the people we work with focus on what matters.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Our services</div>
+      <h2>Three ways we help PMO teams deliver.</h2>
+      <p>Tailored, hands-on, and grounded in real Civil Service delivery experience.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>Managing Delivery</h3>
+        <p>Tailor-made delivery management skills workshops covering Agile delivery methodologies — SCRUM, LeSS, SAFe — and market-leading tools like Jira.</p>
+        <p>All our Delivery Coaches are experienced and certified.</p>
+        <div class="service-tags">
+          <span class="tag">SCRUM</span>
+          <span class="tag">LeSS</span>
+          <span class="tag">SAFe</span>
+          <span class="tag">Jira</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>Business Analysis</h3>
+        <p>We work with clients to understand and improve benefit realisation while driving down the cost of delivery processes.</p>
+        <p>Reliable management information underpins it all — we work hard to improve data quality and turn that data into actionable MI.</p>
+        <div class="service-tags">
+          <span class="tag">Benefit realisation</span>
+          <span class="tag">MI</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>Data Visualisation</h3>
+        <p>A deep understanding of visualising P3M data, using tools ranging from MS Excel to Qlik Sense.</p>
+        <p>Our aim is always to visualise the message — and help people focus on what matters.</p>
+        <div class="service-tags">
+          <span class="tag">Excel</span>
+          <span class="tag">Qlik Sense</span>
+          <span class="tag">P3M</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Get in touch</div>
+      <h2>Let's talk about working together.</h2>
+      <p>Please feel free to use the details below to discuss working with us.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Correspondence address</h3>
+        <address>
+          c/o Jenner's Chartered Certified Accountants<br>
+          Rural Enterprise Centre<br>
+          Vincent Cary Road<br>
+          Rotherwas, Hereford HR2 6FE
+        </address>
+        <div class="contact-meta">Company registered in England No. 11275805</div>
+      </div>
+      <div class="contact-card">
+        <h3>Start a conversation</h3>
+        <p style="color:#C7CDD1; font-size:0.95rem; margin-bottom:18px;">Tell us about your delivery challenge and we'll get back to you.</p>
+        <a href="mailto:hello@twentythreehundred.co.uk" class="btn btn-primary">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 TwentyThreeHundred Ltd. Company No. 11275805.</p>
+    <p>Cheltenham &amp; London</p>
+  </div>
+</footer>
+
+</body>
+</html>

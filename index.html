@@ -3,524 +3,468 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TwentyThreeHundred — PMO Delivery, Training &amp; Data for Government</title>
+<title>TwentyThreeHundred — Full-Stack Strategic Planning &amp; Optimisation for Government</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  :root{
-    --orange: #D9670B;
-    --orange-dark: #B8530A;
-    --ink: #1C2B33;
-    --slate: #5B6B73;
-    --bg: #F7F5F1;
-    --card: #FFFFFF;
-    --line: #E4DFD5;
-    --serif: 'Source Serif 4', Georgia, serif;
-    --sans: 'Inter', -apple-system, sans-serif;
+  /* ── HOME HERO ──────────────────────── */
+  .home-hero {
+    background: var(--navy);
+    color: white;
+    padding: 100px 0 88px;
+    position: relative;
+    overflow: hidden;
   }
-
-  *{box-sizing:border-box; margin:0; padding:0;}
-
-  body{
-    font-family: var(--sans);
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.6;
+  .home-hero::before {
+    content: "2300";
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
   }
-
-  img{max-width:100%; display:block;}
-  a{color:inherit;}
-
-  .wrap{
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  :focus-visible{
-    outline: 3px solid var(--orange);
-    outline-offset: 2px;
-  }
-
-  /* ---------- Header ---------- */
-  header{
-    border-bottom: 1px solid var(--line);
-    background: var(--bg);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  .header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding: 18px 24px;
-  }
-  .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  .logo-mark{
-    width:38px; height:38px;
-    background: var(--ink);
-    color: #fff;
-    font-family: var(--serif);
-    font-weight:700;
-    display:flex; align-items:center; justify-content:center;
-    font-size: 1rem;
-    border-radius: 3px;
-  }
-  .logo-text{
-    font-family: var(--serif);
-    font-weight:600;
-    font-size: 1.25rem;
-    letter-spacing: -0.01em;
-  }
-  nav a{
-    text-decoration:none;
-    color: var(--ink);
-    font-weight:500;
-    font-size: 0.95rem;
-    margin-left: 32px;
-  }
-  nav a:hover{ color: var(--orange-dark); }
-  .nav-cta{
-    background: var(--orange);
-    color: #fff !important;
-    padding: 9px 18px;
-    border-radius: 4px;
-    font-weight:600;
-  }
-  .nav-cta:hover{ background: var(--orange-dark); }
-
-  /* ---------- Hero ---------- */
-  .hero{
-    padding: 88px 0 72px;
-  }
-  .hero-inner{
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
+  .home-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
-  .eyebrow{
-    font-size: 0.8rem;
-    font-weight:600;
-    letter-spacing: 0.08em;
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--orange-dark);
-    margin-bottom: 18px;
-  }
-  h1{
-    font-family: var(--serif);
-    font-size: 2.85rem;
-    line-height: 1.12;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    color: var(--orange);
     margin-bottom: 22px;
   }
-  .hero p.lede{
-    font-size: 1.15rem;
-    color: var(--slate);
-    max-width: 46ch;
-    margin-bottom: 32px;
-  }
-  .hero-actions{
-    display:flex;
-    gap:14px;
-    flex-wrap: wrap;
-  }
-  .btn{
-    display:inline-block;
-    padding: 13px 24px;
-    border-radius: 4px;
-    font-weight:600;
-    font-size: 0.95rem;
-    text-decoration:none;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  }
-  .btn-primary{
+  .hero-eyebrow::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 2px;
     background: var(--orange);
-    color: #fff;
   }
-  .btn-primary:hover{ background: var(--orange-dark); }
-  .btn-secondary{
-    background: transparent;
-    color: var(--ink);
-    border: 1.5px solid var(--line);
+  .home-hero h1 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+    max-width: 17ch;
   }
-  .btn-secondary:hover{ border-color: var(--ink); }
-
-  /* Three-principle device — the signature element */
-  .principles{
-    display:flex;
-    flex-direction: column;
-    gap: 0;
-    border: 1px solid var(--line);
-    background: var(--card);
-    border-radius: 6px;
-    overflow:hidden;
-  }
-  .principle{
-    padding: 22px 26px;
-    border-bottom: 1px solid var(--line);
-    position: relative;
-    padding-left: 30px;
-  }
-  .principle:last-child{ border-bottom:none; }
-  .principle::before{
-    content:"";
-    position:absolute;
-    left:0; top:0; bottom:0;
-    width: 5px;
-  }
-  .principle:nth-child(1)::before{ background: var(--orange); }
-  .principle:nth-child(2)::before{ background: var(--ink); }
-  .principle:nth-child(3)::before{ background: var(--slate); }
-  .principle-label{
-    font-family: var(--serif);
+  .home-hero .hero-sub {
     font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 4px;
+    color: rgba(255,255,255,0.68);
+    max-width: 50ch;
+    margin-bottom: 38px;
+    line-height: 1.72;
   }
-  .principle-sub{
-    font-size: 0.88rem;
-    color: var(--slate);
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-outline-white {
+    background: transparent;
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    padding: 13px 28px;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 2px;
+    transition: all 0.15s;
+    cursor: pointer;
   }
+  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.06); }
 
-  /* ---------- Credibility strip ---------- */
-  .credibility{
-    background: var(--ink);
-    color: #fff;
-    padding: 28px 0;
-  }
-  .credibility .wrap{
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .credibility-text{
-    font-family: var(--serif);
-    font-size: 1.05rem;
-  }
-  .credibility-text strong{
-    color: var(--orange);
-  }
-  .credibility-meta{
-    font-size: 0.85rem;
-    color: #C7CDD1;
-  }
-
-  /* ---------- Section shared ---------- */
-  section{ padding: 80px 0; }
-  .section-head{
-    max-width: 60ch;
-    margin-bottom: 48px;
-  }
-  .section-eyebrow{
-    font-size: 0.8rem;
-    font-weight:600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--orange-dark);
-    margin-bottom: 12px;
-  }
-  h2{
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin-bottom: 14px;
-  }
-  .section-head p{
-    color: var(--slate);
-    font-size: 1.05rem;
-  }
-
-  /* ---------- About ---------- */
-  .about{ background: var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .about-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-  }
-  .about-grid p{
-    margin-bottom: 16px;
-    color: var(--ink);
-  }
-  .about-grid p:last-child{ margin-bottom:0; }
-
-  /* ---------- Services ---------- */
-  .services-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-  .service-card{
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-  }
-  .service-number{
-    font-family: var(--serif);
-    font-size: 0.85rem;
-    color: var(--orange-dark);
-    font-weight:600;
-    padding: 22px 24px 0;
-  }
-  .service-card h3{
-    font-family: var(--serif);
-    font-size: 1.3rem;
-    font-weight:600;
-    padding: 8px 24px 0;
-    margin-bottom: 10px;
-  }
-  .service-card p{
-    padding: 0 24px;
-    color: var(--slate);
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-  }
-  .service-card p:last-of-type{ margin-bottom: 24px; }
-  .service-tags{
-    padding: 0 24px 24px;
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-top: auto;
-  }
-  .tag{
-    font-size: 0.78rem;
-    font-weight:500;
-    color: var(--slate);
-    background: var(--bg);
-    border: 1px solid var(--line);
-    padding: 4px 10px;
-    border-radius: 100px;
-  }
-
-  /* ---------- Contact ---------- */
-  .contact{
-    background: var(--ink);
-    color: #fff;
-  }
-  .contact .section-eyebrow{ color: #F2A65A; }
-  .contact h2{ color: #fff; }
-  .contact .section-head p{ color: #C7CDD1; }
-  .contact-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  .contact-card{
+  /* Pillars panel */
+  .pillars {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 6px;
-    padding: 28px;
+    border-radius: 3px;
+    overflow: hidden;
   }
-  .contact-card h3{
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    margin-bottom: 14px;
-    font-weight:600;
+  .pillar {
+    padding: 22px 26px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
   }
-  .contact-card address{
-    font-style: normal;
-    color: #C7CDD1;
-    line-height: 1.7;
-    font-size: 0.95rem;
-  }
-  .contact-meta{
-    margin-top: 18px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    font-size: 0.85rem;
-    color: #9AA5AB;
-  }
-  .contact .btn-primary{
-    margin-top: 8px;
-  }
+  .pillar:last-child { border-bottom: none; }
+  .pillar-arrow { color: var(--orange); font-size: 1.1rem; font-weight: 800; flex-shrink: 0; padding-top: 2px; }
+  .pillar-from { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 3px; }
+  .pillar-to { font-size: 0.98rem; font-weight: 700; color: white; margin-bottom: 4px; }
+  .pillar-desc { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.55; }
 
-  /* ---------- Footer ---------- */
-  footer{
-    background: var(--ink);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding: 28px 0;
-  }
-  footer .wrap{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  footer p{
-    color: #9AA5AB;
-    font-size: 0.85rem;
-  }
+  /* ── CRED STRIP ─────────────────────── */
+  .cred-strip { background: var(--orange); color: white; }
+  .cred-inner { display: flex; align-items: stretch; flex-wrap: wrap; }
+  .cred-item { padding: 22px 40px; border-right: 1px solid rgba(255,255,255,0.22); display: flex; flex-direction: column; gap: 3px; }
+  .cred-item:last-child { border-right: none; }
+  .cred-number { font-size: 2rem; font-weight: 800; line-height: 1; }
+  .cred-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.82; }
+  .cred-tag { flex: 1; display: flex; align-items: center; padding: 22px 40px; font-size: 0.95rem; font-weight: 600; font-style: italic; opacity: 0.9; }
 
-  /* ---------- Responsive ---------- */
-  @media (max-width: 860px){
-    .hero-inner, .about-grid, .contact-grid{
-      grid-template-columns: 1fr;
-    }
-    .services-grid{
-      grid-template-columns: 1fr;
-    }
-    h1{ font-size: 2.2rem; }
-    nav a:not(.nav-cta){ display:none; }
-    .credibility .wrap{ flex-direction:column; align-items:flex-start; }
+  /* ── WHY 2300 ───────────────────────── */
+  .why { background: var(--bg); border-bottom: 1px solid var(--line); }
+  .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .why p { color: var(--muted); margin-bottom: 16px; line-height: 1.78; font-size: 1.02rem; }
+  .why p strong { color: var(--navy); }
+  .reynolds-box { background: var(--navy); color: white; border-radius: 3px; padding: 40px; position: relative; overflow: hidden; }
+  .reynolds-box::before { content: "Re"; position: absolute; right: -8px; bottom: -22px; font-size: 10rem; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; }
+  .reynolds-number { font-size: 5.5rem; font-weight: 800; color: var(--orange); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
+  .reynolds-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 22px; }
+  .reynolds-desc { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.68; position: relative; }
+
+  /* ── SERVICES PREVIEW ───────────────── */
+  .services-preview { background: var(--navy); padding: 72px 0; color: white; }
+  .services-preview h2 { color: white; }
+  .sp-head { margin-bottom: 44px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; }
+  .sp-head p { color: rgba(255,255,255,0.58); font-size: 1rem; max-width: 52ch; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .svc-tile { background: var(--navy-d); padding: 28px 20px; transition: background 0.15s; }
+  .svc-tile:hover { background: #002040; }
+  .svc-icon { width: 44px; height: 44px; margin-bottom: 14px; }
+  .svc-icon img { width: 44px; height: 44px; object-fit: contain; }
+  /* SVG icon styles */
+  .svc-icon svg { width: 44px; height: 44px; }
+  .svc-tile h3 { font-size: 0.88rem; font-weight: 700; color: white; margin-bottom: 7px; line-height: 1.3; }
+  .svc-tile p { font-size: 0.78rem; color: rgba(255,255,255,0.48); line-height: 1.55; }
+
+  /* Partners strip */
+  .partners { background: var(--bg); padding: 44px 0; border-bottom: 1px solid var(--line); }
+  .partners-inner { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .partners-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); flex-shrink: 0; }
+  .partner-badge { font-size: 0.9rem; font-weight: 700; color: var(--navy); border: 1.5px solid var(--line); padding: 9px 18px; border-radius: 3px; background: white; }
+
+  @media (max-width: 1000px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 860px) {
+    .home-hero-inner, .why-inner { grid-template-columns: 1fr; gap: 40px; }
+    .home-hero::before { display: none; }
+    .home-hero h1 { font-size: 2.4rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .home-hero h1 { font-size: 2rem; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner wrap" style="padding-left:0; padding-right:0;">
-    <div class="logo">
-      <div class="logo-mark">T3</div>
-      <div class="logo-text">TwentyThreeHundred</div>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact" class="nav-cta">Get in touch</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-inner">
-    <div>
-      <div class="eyebrow">PMO Delivery &amp; Data for Government</div>
-      <h1>Helping PMO service providers cut cost and lift productivity.</h1>
-      <p class="lede">We work with PMO service providers to Government, combining delivery coaching, business analysis and data visualisation to turn fragmented project information into decisions you can act on.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Start a conversation</a>
-        <a href="#services" class="btn btn-secondary">See our services</a>
-      </div>
-    </div>
-    <div class="principles">
-      <div class="principle">
-        <div class="principle-label">Maximising Flow</div>
-        <div class="principle-sub">Removing friction from delivery so work moves at pace.</div>
-      </div>
-      <div class="principle">
-        <div class="principle-label">Elevating Constraints</div>
-        <div class="principle-sub">Finding and fixing the bottleneck that limits everything else.</div>
-      </div>
-      <div class="principle">
-        <div class="principle-label">Avoiding Chaos</div>
-        <div class="principle-sub">Reliable management information, not guesswork.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="credibility">
-  <div class="wrap">
-    <div class="credibility-text"><strong>60+ years</strong> combined experience in portfolio delivery and management for Civil Service clients.</div>
-    <div class="credibility-meta">Cheltenham &amp; London</div>
+<!-- UTIL BAR -->
+<div class="util-bar">
+  <div class="wrap util-inner">
+    <a href="get-in-touch.html">Contact us</a>
+    <a href="#">Cheltenham &amp; London</a>
   </div>
 </div>
 
-<section class="about" id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">About us</div>
-      <h2>A vibrant SME built on Civil Service delivery experience.</h2>
+<!-- HEADER -->
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-badge"><span>23</span><span>00</span></div>
+      <span class="logo-name">TwentyThreeHundred</span>
+    </a>
+    <nav>
+      <a href="who-we-are.html">Who we are</a>
+      <a href="what-we-do.html">What we do</a>
+      <a href="how-we-work.html">How we work</a>
+      <a href="products-and-services.html">Products &amp; services</a>
+      <a href="get-in-touch.html" class="nav-cta">Get in touch</a>
+    </nav>
+  </div>
+</header>
+<div class="accent-bar"></div>
+
+<!-- HOME HERO -->
+<section class="home-hero">
+  <div class="wrap home-hero-inner">
+    <div>
+      <div class="hero-eyebrow">HM Government · PMO · Portfolio Delivery</div>
+      <h1>Full-stack strategic planning &amp; optimisation.</h1>
+      <p class="hero-sub">We enable PMO service providers to Government to drive down costs and increase productivity — through delivery coaching, data insights, portfolio planning and technology.</p>
+      <div class="hero-actions">
+        <a href="what-we-do.html" class="btn btn-primary">What we do</a>
+        <a href="get-in-touch.html" class="btn-outline-white">Get in touch</a>
+      </div>
     </div>
-    <div class="about-grid">
-      <p>TwentyThreeHundred is a vibrant SME based in Cheltenham and London. We enable PMO service providers to Government to drive down costs and drive up productivity through innovative training delivery, data analysis and reporting.</p>
-      <p>The founders have spent over 60 years working in portfolio delivery and management for Civil Service clients — experience that shapes every workshop, every piece of analysis, and every dashboard we build. Our aim is always to visualise the message, and to help the people we work with focus on what matters.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-arrow">↑</div>
+        <div>
+          <div class="pillar-from">Increase Transparency to</div>
+          <div class="pillar-to">Improve Understanding</div>
+          <div class="pillar-desc">Data that enables senior leaders to make confident, well-informed decisions based on verifiable insight.</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-arrow">↑</div>
+        <div>
+          <div class="pillar-from">Increase Accountability to</div>
+          <div class="pillar-to">Improve Assurance</div>
+          <div class="pillar-desc">Inspiring confidence in teams, empowering them to own their challenges and seize opportunities.</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-arrow">↑</div>
+        <div>
+          <div class="pillar-from">Improve Performance to</div>
+          <div class="pillar-to">Increase Value</div>
+          <div class="pillar-desc">Unblocking delivery and increasing the flow of value across your organisation.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="services" id="services">
+<!-- CRED STRIP -->
+<div class="cred-strip">
   <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">Our services</div>
-      <h2>Three ways we help PMO teams deliver.</h2>
-      <p>Tailored, hands-on, and grounded in real Civil Service delivery experience.</p>
+    <div class="cred-inner">
+      <div class="cred-item"><div class="cred-number">8+</div><div class="cred-label">Years serving Government</div></div>
+      <div class="cred-item"><div class="cred-number">60+</div><div class="cred-label">Years combined experience</div></div>
+      <div class="cred-item"><div class="cred-number">10</div><div class="cred-label">Service capabilities</div></div>
+      <div class="cred-tag">Proud to be part of the AXIA Consortium · Cheltenham &amp; London</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY 2300 -->
+<section class="why">
+  <div class="wrap why-inner">
+    <div>
+      <div class="section-eyebrow">Why TwentyThreeHundred?</div>
+      <h2>Where maximum value flows freely.</h2>
+      <p>Picture water streaming through a channel — it may move smoothly at times or become rough and turbulent. The speed of this flow depends on system limitations, friction, and a mathematical constant called the <strong>Reynolds number</strong>.</p>
+      <p>When the Reynolds number exceeds <strong>2300</strong>, movement shifts from calm and predictable to chaotic and erratic. Below 2300, the flow remains stable but is slower.</p>
+      <p><strong>TwentyThreeHundred</strong> exists to elevate constraints, reduce friction, and build the conditions where maximum value flows freely throughout your organisation.</p>
+      <a href="who-we-are.html" class="btn btn-primary" style="margin-top:8px;">Learn about us</a>
+    </div>
+    <div class="reynolds-box">
+      <div class="reynolds-number">2300</div>
+      <div class="reynolds-label">The Reynolds Number</div>
+      <div class="reynolds-desc">Formed in 2018 by specialist delivery professionals from the world of P3M, TwentyThreeHundred has become a vibrant, connected enterprise with deep expertise in Portfolio Management, Planning, Product Management, Business Analysis and Technology — all in service of Government clients.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+  <div class="wrap">
+    <div class="sp-head">
+      <div>
+        <div class="section-eyebrow" style="color:var(--orange)">Our capabilities</div>
+        <h2>Ten service areas. One connected approach.</h2>
+        <p>From strategic planning to technology delivery — our catalogue covers every stage of the lifecycle.</p>
+      </div>
+      <a href="products-and-services.html" class="btn btn-primary">Full catalogue</a>
     </div>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-number">01</div>
-        <h3>Managing Delivery</h3>
-        <p>Tailor-made delivery management skills workshops covering Agile delivery methodologies — SCRUM, LeSS, SAFe — and market-leading tools like Jira.</p>
-        <p>All our Delivery Coaches are experienced and certified.</p>
-        <div class="service-tags">
-          <span class="tag">SCRUM</span>
-          <span class="tag">LeSS</span>
-          <span class="tag">SAFe</span>
-          <span class="tag">Jira</span>
+
+      <!-- Agile Delivery -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="14" r="5" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M14 34c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M30 20l4-4m0 0l4 4m-4-4v10" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="6" y="38" width="36" height="4" rx="1" stroke="#EA5B0C" stroke-width="2.2"/>
+          </svg>
         </div>
+        <h3>Agile Delivery</h3>
+        <p>Agile coaching, Scrum &amp; Kanban, Scrum Master services, scaled agile and value stream optimisation.</p>
       </div>
-      <div class="service-card">
-        <div class="service-number">02</div>
+
+      <!-- Insights -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#EA5B0C" stroke-width="2.2"/>
+            <circle cx="24" cy="24" r="4" stroke="#EA5B0C" stroke-width="2.2"/>
+            <circle cx="24" cy="24" r="1.5" fill="#EA5B0C"/>
+            <path d="M6 24h4M38 24h4" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Insights</h3>
+        <p>P3M portfolio performance insight, bespoke data visualisation, metrics across performance and financial position.</p>
+      </div>
+
+      <!-- Technology -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="10" width="32" height="22" rx="2" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M16 38h16M24 32v6" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M15 20l4 4-4 4M23 28h6" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Technology</h3>
+        <p>Tooling development, database warehousing, cloud services and analytics leveraging AWS and MS-SQL.</p>
+      </div>
+
+      <!-- Portfolio Planning -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="32" height="32" rx="2" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M8 17h32" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M17 8v9" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M31 8v9" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M14 26h8M14 32h12" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Portfolio Planning</h3>
+        <p>Portfolio and programme schedule development, stakeholder engagement, plan integration and governance.</p>
+      </div>
+
+      <!-- Financial Reporting -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="32" height="32" rx="2" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M16 32l6-7 5 4 7-10" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24 14v2M24 14c-2.2 0-4 1.343-4 3s1.8 3 4 3 4 1.343 4 3-1.8 3-4 3M24 28v2" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Financial Reporting</h3>
+        <p>Portfolio financial planning, forecasting, benefits realisation, governance controls and decision support.</p>
+      </div>
+
+      <!-- Product Discovery -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="11" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M29.5 29.5L40 40" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M17 21h8M21 17v8" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Product Discovery</h3>
+        <p>Opportunity assessment, customer research, journey mapping, hypothesis testing and value modelling.</p>
+      </div>
+
+      <!-- Product Delivery -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="20" height="24" rx="2" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M28 20h8l4 6-4 6h-8" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 22h10M13 27h7M13 32h10" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Product Delivery</h3>
+        <p>Roadmap development, iterative delivery, cross-functional team enablement and outcome measurement.</p>
+      </div>
+
+      <!-- Business Analysis -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 38V14l7-6h21v30H10z" stroke="#EA5B0C" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M10 14h7V8" stroke="#EA5B0C" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M16 22h16M16 27h16M16 32h10" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <h3>Business Analysis</h3>
-        <p>We work with clients to understand and improve benefit realisation while driving down the cost of delivery processes.</p>
-        <p>Reliable management information underpins it all — we work hard to improve data quality and turn that data into actionable MI.</p>
-        <div class="service-tags">
-          <span class="tag">Benefit realisation</span>
-          <span class="tag">MI</span>
-        </div>
+        <p>Strategy and discovery, process improvement, operating model design, requirements definition and BA capability.</p>
       </div>
-      <div class="service-card">
-        <div class="service-number">03</div>
-        <h3>Data Visualisation</h3>
-        <p>A deep understanding of visualising P3M data, using tools ranging from MS Excel to Qlik Sense.</p>
-        <p>Our aim is always to visualise the message — and help people focus on what matters.</p>
-        <div class="service-tags">
-          <span class="tag">Excel</span>
-          <span class="tag">Qlik Sense</span>
-          <span class="tag">P3M</span>
+
+      <!-- Business Change -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="14" r="5" stroke="#EA5B0C" stroke-width="2.2"/>
+            <circle cx="10" cy="36" r="4" stroke="#EA5B0C" stroke-width="2.2"/>
+            <circle cx="38" cy="36" r="4" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M24 19v6M24 25l-10 7M24 25l10 7" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
         </div>
+        <h3>Business Change</h3>
+        <p>Change strategy, PROSCI-aligned delivery, ADKAR adoption, stakeholder engagement and benefits measurement.</p>
       </div>
+
+      <!-- Technical Authority -->
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="16" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="6" stroke="#EA5B0C" stroke-width="2.2"/>
+            <path d="M17 17l4 4M27 27l4 4M31 17l-4 4M17 31l4-4" stroke="#EA5B0C" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Technical Authority</h3>
+        <p>Technology strategy, architecture governance, standards, risk management and systems integration guidance.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- PARTNERS -->
+<div class="partners">
   <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">Get in touch</div>
-      <h2>Let's talk about working together.</h2>
-      <p>Please feel free to use the details below to discuss working with us.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Correspondence address</h3>
-        <address>
-          c/o Jenner's Chartered Certified Accountants<br>
-          Rural Enterprise Centre<br>
-          Vincent Cary Road<br>
-          Rotherwas, Hereford HR2 6FE
-        </address>
-        <div class="contact-meta">Company registered in England No. 11275805</div>
-      </div>
-      <div class="contact-card">
-        <h3>Start a conversation</h3>
-        <p style="color:#C7CDD1; font-size:0.95rem; margin-bottom:18px;">Tell us about your delivery challenge and we'll get back to you.</p>
-        <a href="mailto:hello@twentythreehundred.co.uk" class="btn btn-primary">Email us</a>
-      </div>
+    <div class="partners-inner">
+      <div class="partners-label">Working with</div>
+      <div class="partner-badge">AtkinsRéalis</div>
+      <div class="partner-badge">AXIA Consortium</div>
+      <div class="partner-badge">HM Government</div>
     </div>
   </div>
-</section>
+</div>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <p>&copy; 2026 TwentyThreeHundred Ltd. Company No. 11275805.</p>
-    <p>Cheltenham &amp; London</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-badge"><span>23</span><span>00</span></div>
+          <span class="logo-name">TwentyThreeHundred</span>
+        </div>
+        <p>Full-stack strategic planning, analytics and optimisation for large organisations, specialising in HM Government support.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="who-we-are.html">Who we are</a>
+        <a href="what-we-do.html">What we do</a>
+        <a href="how-we-work.html">How we work</a>
+        <a href="products-and-services.html">Products &amp; services</a>
+        <a href="get-in-touch.html">Get in touch</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:rhod@twentythreehundred.com">rhod@twentythreehundred.com</a>
+        <a href="tel:07971555886">07971 555886 — Rhod Hughes</a>
+        <a href="mailto:gareth@twentythreehundred.com">gareth@twentythreehundred.com</a>
+        <a href="tel:07976397949">07976 397949 — Gareth Watkins</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 TwentyThreeHundred Ltd · Company No. 11275805</span>
+      <span>Cheltenham &amp; London</span>
+    </div>
   </div>
 </footer>
 

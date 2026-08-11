@@ -8,166 +8,119 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  .contact-section { background: var(--bg); border-top: 1px solid var(--line); }
-  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .contact-intro h2 { margin-bottom: 16px; }
-  .contact-intro p { color: var(--muted); line-height: 1.78; margin-bottom: 16px; font-size: 1.02rem; }
-  .contact-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
-  .person-card { background: white; border: 1px solid var(--line); border-radius: 3px; padding: 28px 28px 24px; }
-  .person-card.featured { background: var(--navy); border-color: var(--navy); }
-  .person-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; color: var(--navy); }
-  .person-card.featured h3 { color: white; }
-  .person-role { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); margin-bottom: 18px; }
-  .person-card.featured .person-role { color: rgba(255,255,255,0.45); }
-  .contact-row { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; }
-  .person-card.featured .contact-row { color: rgba(255,255,255,0.72); }
-  .contact-row svg { width: 16px; height: 16px; flex-shrink: 0; opacity: 0.55; }
-  .contact-row a { transition: color 0.15s; }
-  .contact-row a:hover { color: var(--orange); }
-  .person-card.featured .contact-row a:hover { color: var(--sky); }
-  .address-card { background: white; border: 1px solid var(--line); border-radius: 3px; padding: 28px; margin-top: 40px; }
-  .address-card h3 { margin-bottom: 16px; }
-  .address-card address { font-style: normal; color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
-  .address-card .reg { font-size: 0.8rem; color: var(--grey); margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
-  .why-us { background: var(--white); border-top: 1px solid var(--line); }
-  .why-us-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
-  .wu-card { border: 1px solid var(--line); border-radius: 3px; padding: 28px; }
-  .wu-card h3 { font-size: 0.95rem; margin-bottom: 8px; }
-  .wu-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-  @media (max-width: 860px) {
-    .contact-layout { grid-template-columns: 1fr; }
-    .why-us-grid { grid-template-columns: 1fr; }
-  }
-</style>
 </head>
 <body>
 
-<div class="util-bar">
-  <div class="wrap util-inner">
-    <a href="get-in-touch.html">Contact us</a>
-    <a href="#">Cheltenham &amp; London</a>
-  </div>
-</div>
-
 <header>
   <div class="wrap header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-badge"><span>23</span><span>00</span></div>
-      <span class="logo-name">TwentyThreeHundred</span>
-    </a>
+    <div class="logo-left">
+      <span class="logo-left-text">TwentyThreeHundred</span>
+    </div>
     <nav>
+      <a href="index.html">What we do</a>
       <a href="who-we-are.html">Who we are</a>
-      <a href="what-we-do.html">What we do</a>
       <a href="how-we-work.html">How we work</a>
       <a href="products-and-services.html">Products &amp; services</a>
-      <a href="get-in-touch.html" class="nav-cta active" style="background:var(--orange-d);">Get in touch</a>
+      <a href="get-in-touch.html" class="active">Get in touch</a>
     </nav>
+    <div class="logo-right">
+      <div class="logo-num"><span>23</span><span>00</span></div>
+    </div>
   </div>
 </header>
 <div class="accent-bar"></div>
 
-<div class="page-hero">
-  <div class="wrap page-hero-inner">
-    <div class="page-eyebrow">Get in touch</div>
-    <h1>Let's talk about how we can help.</h1>
-    <p>Whether you're looking to drive down costs, improve delivery performance or build better management information — we'd love to hear from you. Reach out to Rhod or Gareth directly.</p>
+<!-- HERO IMAGE -->
+<div style="position:relative;height:340px;overflow:hidden;">
+  <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Modern office" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,30,56,0.88) 0%,rgba(0,30,56,0.5) 60%,transparent 100%);display:flex;align-items:center;">
+    <div style="padding:0 40px;max-width:560px;">
+      <div class="page-eyebrow">Get in touch</div>
+      <h1 style="font-size:2.6rem;font-weight:800;line-height:1.08;letter-spacing:-0.025em;color:white;margin-bottom:16px;">Let's talk about how we can help.</h1>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.72);line-height:1.7;">Whether you want to drive down costs, improve delivery performance or build better management information, reach out to Rhod or Gareth directly.</p>
+    </div>
   </div>
 </div>
 
-<section class="contact-section">
+<!-- CONTACT CARDS -->
+<section class="section-white">
   <div class="wrap">
-    <div class="contact-layout">
-      <div>
-        <div class="section-eyebrow">Direct contacts</div>
-        <div class="contact-cards">
-          <div class="person-card featured">
-            <h3>Rhod Hughes</h3>
-            <div class="person-role">Product Director</div>
-            <div class="contact-row">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              <a href="tel:07971555886">07971 555886</a>
-            </div>
-            <div class="contact-row">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              <a href="mailto:rhod@twentythreehundred.com">rhod@twentythreehundred.com</a>
-            </div>
-          </div>
-          <div class="person-card">
-            <h3>Gareth Watkins</h3>
-            <div class="person-role">Commercial Director</div>
-            <div class="contact-row">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              <a href="tel:07976397949">07976 397949</a>
-            </div>
-            <div class="contact-row">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              <a href="mailto:gareth@twentythreehundred.com">gareth@twentythreehundred.com</a>
-            </div>
-          </div>
+    <div class="section-eyebrow">Direct contacts</div>
+    <h2>Speak to us directly.</h2>
+    <div class="two-col" style="margin-top:36px;align-items:start;gap:28px;">
+
+      <div class="contact-card featured">
+        <h3>Rhod Hughes</h3>
+        <div class="contact-role">Product Director</div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:07971555886" style="color:rgba(255,255,255,0.75);">07971 555886</a>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:rhod@twentythreehundred.com" style="color:rgba(255,255,255,0.75);">rhod@twentythreehundred.com</a>
+        </div>
+        <div style="margin-top:20px;">
+          <a href="mailto:rhod@twentythreehundred.com" class="btn btn-orange" style="width:100%;text-align:center;display:block;">Email Rhod</a>
         </div>
       </div>
-      <div>
-        <div class="section-eyebrow">Registered address</div>
-        <div class="address-card">
-          <h3>TwentyThreeHundred Ltd</h3>
-          <address>
-            c/o Jenner's Chartered Certified Accountants<br>
-            Rural Enterprise Centre<br>
-            Vincent Cary Road<br>
-            Rotherwas<br>
-            Hereford<br>
-            HR2 6FE
-          </address>
-          <div class="reg">Company registered in England · No. 11275805</div>
+
+      <div class="contact-card">
+        <h3>Gareth Watkins</h3>
+        <div class="contact-role">Commercial Director</div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:07976397949">07976 397949</a>
         </div>
-        <div style="margin-top:24px;padding:24px;background:rgba(234,91,12,0.06);border:1px solid rgba(234,91,12,0.2);border-radius:3px;">
-          <p style="font-size:0.88rem;color:var(--muted);line-height:1.65;margin-bottom:12px;">Not sure which service fits your need? Rhod and Gareth are happy to have an initial conversation to understand your context and point you in the right direction.</p>
-          <a href="mailto:rhod@twentythreehundred.com" class="btn btn-primary">Email us</a>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:gareth@twentythreehundred.com">gareth@twentythreehundred.com</a>
         </div>
+        <div style="margin-top:20px;">
+          <a href="mailto:gareth@twentythreehundred.com" class="btn btn-navy" style="width:100%;text-align:center;display:block;">Email Gareth</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATIONS -->
+<section class="section-navy">
+  <div class="wrap">
+    <div class="section-eyebrow light">Accreditations</div>
+    <h2 class="white">Certified and assured.</h2>
+    <div class="two-col" style="margin-top:36px;align-items:start;gap:28px;">
+      <div style="background:rgba(168,198,134,0.12);border:1px solid rgba(168,198,134,0.3);border-radius:4px;padding:32px;">
+        <div style="width:48px;height:48px;background:var(--green-d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 13l5 5L21 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="color:white;margin-bottom:8px;">Cyber Essentials Certified</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.65;">TwentyThreeHundred holds Cyber Essentials certification, demonstrating our commitment to protecting against the most common cyber threats.</p>
+      </div>
+      <div style="background:rgba(175,219,245,0.12);border:1px solid rgba(175,219,245,0.3);border-radius:4px;padding:32px;">
+        <div style="width:48px;height:48px;background:var(--sky-d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 13l5 5L21 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="color:white;margin-bottom:8px;">Cyber Essentials Plus Certified</h3>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.65;">We also hold Cyber Essentials Plus, the higher-level certification requiring independent verification of our cyber security controls through hands-on technical testing.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="why-us">
-  <div class="wrap">
-    <div class="section-eyebrow">Why work with us</div>
-    <h2>What to expect when you work with TwentyThreeHundred.</h2>
-    <div class="why-us-grid">
-      <div class="wu-card">
-        <div style="width:28px;height:3px;background:var(--orange);margin-bottom:16px;border-radius:2px;"></div>
-        <h3>Deliverables-based engagement</h3>
-        <p>We don't charge for turning up. Every engagement is structured around clear deliverables with agreed acceptance criteria, so you always know what you're paying for.</p>
-      </div>
-      <div class="wu-card">
-        <div style="width:28px;height:3px;background:var(--orange);margin-bottom:16px;border-radius:2px;"></div>
-        <h3>Government-native experience</h3>
-        <p>Our founders and senior consultants have spent decades inside Civil Service delivery — we understand the context, the governance and the constraints you're working within.</p>
-      </div>
-      <div class="wu-card">
-        <div style="width:28px;height:3px;background:var(--orange);margin-bottom:16px;border-radius:2px;"></div>
-        <h3>Right-sized for your problem</h3>
-        <p>We're a right-sized enterprise — large enough to deliver, small enough to care. No unnecessary overhead, no junior consultants left unsupervised. Senior people, hands-on.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-main">
       <div class="footer-brand">
-        <div class="logo">
-          <div class="logo-badge"><span>23</span><span>00</span></div>
-          <span class="logo-name">TwentyThreeHundred</span>
-        </div>
+        <div style="font-weight:800;font-size:1.1rem;color:white;">TwentyThreeHundred</div>
         <p>Full-stack strategic planning, analytics and optimisation for large organisations, specialising in HM Government support.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
+        <a href="index.html">What we do</a>
         <a href="who-we-are.html">Who we are</a>
-        <a href="what-we-do.html">What we do</a>
         <a href="how-we-work.html">How we work</a>
         <a href="products-and-services.html">Products &amp; services</a>
         <a href="get-in-touch.html">Get in touch</a>
@@ -182,7 +135,10 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 TwentyThreeHundred Ltd · Company No. 11275805</span>
-      <span>Cheltenham &amp; London</span>
+      <div class="footer-cert">
+        <span class="cert-badge">Cyber Essentials Certified</span>
+        <span class="cert-badge">Cyber Essentials Plus Certified</span>
+      </div>
     </div>
   </div>
 </footer>

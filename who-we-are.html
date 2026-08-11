@@ -8,165 +8,121 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .story-grid p { color: var(--muted); margin-bottom: 16px; line-height: 1.78; font-size: 1.02rem; }
-  .story-grid p strong { color: var(--navy); }
-  .reynolds-box { background: var(--navy); color: white; border-radius: 3px; padding: 40px; position: relative; overflow: hidden; }
-  .reynolds-box::before { content: "Re"; position: absolute; right: -8px; bottom: -22px; font-size: 10rem; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; }
-  .reynolds-number { font-size: 5rem; font-weight: 800; color: var(--orange); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
-  .reynolds-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
-  .reynolds-desc { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.68; }
-  .values-section { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .value-card { background: white; border: 1px solid var(--line); border-top: 4px solid var(--orange); border-radius: 3px; padding: 28px; }
-  .value-card h3 { margin-bottom: 10px; }
-  .value-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
-  .pillars-section {}
-  .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .pillar-card { border: 1px solid var(--line); border-radius: 3px; padding: 32px; text-align: center; }
-  .pillar-from-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
-  .pillar-arrow-big { font-size: 2rem; color: var(--orange); font-weight: 800; margin-bottom: 8px; }
-  .pillar-to-label { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
-  .pillar-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-  @media (max-width: 860px) {
-    .story-grid { grid-template-columns: 1fr; }
-    .values-grid, .pillars-grid { grid-template-columns: 1fr; }
-  }
-</style>
 </head>
 <body>
 
-<div class="util-bar">
-  <div class="wrap util-inner">
-    <a href="get-in-touch.html">Contact us</a>
-    <a href="#">Cheltenham &amp; London</a>
-  </div>
-</div>
-
 <header>
   <div class="wrap header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-badge"><span>23</span><span>00</span></div>
-      <span class="logo-name">TwentyThreeHundred</span>
-    </a>
+    <div class="logo-left">
+      <span class="logo-left-text">TwentyThreeHundred</span>
+    </div>
     <nav>
+      <a href="index.html">What we do</a>
       <a href="who-we-are.html" class="active">Who we are</a>
-      <a href="what-we-do.html">What we do</a>
       <a href="how-we-work.html">How we work</a>
       <a href="products-and-services.html">Products &amp; services</a>
-      <a href="get-in-touch.html" class="nav-cta">Get in touch</a>
+      <a href="get-in-touch.html">Get in touch</a>
     </nav>
+    <div class="logo-right">
+      <div class="logo-num"><span>23</span><span>00</span></div>
+    </div>
   </div>
 </header>
 <div class="accent-bar"></div>
 
-<div class="page-hero">
-  <div class="wrap page-hero-inner">
-    <div class="page-eyebrow">Who we are</div>
-    <h1>Built on decades of Civil Service delivery experience.</h1>
-    <p>TwentyThreeHundred is a vibrant, connected and right-sized enterprise — formed by specialist delivery professionals from the world of P3M, now offering full-stack strategic planning, analytics and optimisation for large organisations.</p>
+<!-- HERO IMAGE -->
+<div style="position:relative;height:380px;overflow:hidden;">
+  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80" alt="Professional team" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,30,56,0.85) 0%,rgba(0,30,56,0.45) 60%,transparent 100%);display:flex;align-items:center;">
+    <div style="padding:0 40px;max-width:600px;">
+      <div class="page-eyebrow">Who we are</div>
+      <h1 style="font-size:2.6rem;font-weight:800;line-height:1.08;letter-spacing:-0.025em;color:white;margin-bottom:16px;">Built on decades of programme, project, and product portfolio delivery.</h1>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.72);line-height:1.7;">A vibrant, connected and right-sized enterprise formed by specialist delivery professionals, now offering full-stack strategic planning, analytics and optimisation for large organisations.</p>
+    </div>
   </div>
 </div>
 
-<!-- ORIGIN STORY -->
-<section>
+<!-- OUR STORY -->
+<section class="section-white">
   <div class="wrap">
-    <div class="story-grid">
+    <div class="two-col">
       <div>
         <div class="section-eyebrow">Our story</div>
-        <h2>Why TwentyThreeHundred?</h2>
-        <p>Picture water streaming through a channel — it may move smoothly at times or become rough and turbulent. The speed of this flow depends on system limitations, friction, and a mathematical constant called the <strong>Reynolds number</strong>.</p>
-        <p>For fluids, when the Reynolds number exceeds <strong>2300</strong>, movement shifts from calm and predictable to chaotic and erratic. Below 2300, the flow remains stable but slower.</p>
-        <p><strong>TwentyThreeHundred</strong> aims to elevate constraints, reduce friction, and build the conditions where maximum value can flow freely across your organisation.</p>
-        <p>Originally formed to provide specialist products and services in support of major Government transformation programmes, TwentyThreeHundred was created by like-minded specialist delivery professionals from the world of P3M. Since 2018, we have become a vibrant, connected and right-sized enterprise.</p>
-        <p>Over eight years we've helped customers deliver major IT change initiatives; formed the specialist core of PMO, CoE and Product Operations functions; helped PPM organisations move towards becoming successful Product Organisations; and planned organisation-wide migration to Cloud Services.</p>
+        <h2>Where we came from.</h2>
+        <p class="lead">TwentyThreeHundred was originally formed to provide specialist products and services in support of major HM Government transformation programmes. Created by like-minded specialist delivery professionals from the world of P3M, we have grown into a vibrant, connected and right-sized enterprise.</p>
+        <p class="lead">Since 2018, we have helped our customers deliver major IT change initiatives; formed the specialist core of PMO, CoE and Product Operations functions; helped PPM organisations move towards becoming successful Product Organisations; and planned organisation-wide migration to Cloud Services.</p>
+        <p class="lead">Our subject matter experts work alongside a skilled team of developers who design customised, user-friendly solutions to meet unique needs. Led by senior consultants with 10 to 25 years of industry expertise, our multidisciplinary team brings together extensive knowledge from various sectors.</p>
       </div>
-      <div class="reynolds-box">
-        <div class="reynolds-number">2300</div>
-        <div class="reynolds-label">The Reynolds Number</div>
-        <div class="reynolds-desc">Our name is our philosophy. Below the Reynolds number, flow is laminar — ordered, predictable, efficient. Above it, chaos takes hold. We work at the threshold — removing friction, elevating constraints and enabling the maximum flow of value for our clients.</div>
+      <div>
+        <div class="img-block img-block-tall">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Team collaboration">
+        </div>
+        <div class="highlight-box" style="margin-top:20px;">
+          <h3>Our expertise</h3>
+          <p>Portfolio Management, Planning, Reporting, Project Management, Product Management, Business Analysis, Business Change and Technology — all in service of HM Government clients.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- VALUES -->
-<section class="values-section">
+<section class="section-grey">
   <div class="wrap">
     <div class="section-eyebrow">What we stand for</div>
     <h2>Our core commitments.</h2>
-    <div class="values-grid" style="margin-top:32px;">
-      <div class="value-card">
+    <div class="three-col" style="margin-top:32px;">
+      <div class="card card-top-orange">
         <h3>Delivery-first</h3>
-        <p>Our services are charged on a deliverables basis. We do not charge for simply turning up — we maintain a sharp focus on achieving results that guarantee value for our clients.</p>
+        <p>Our approach maintains a sharp focus on achieving results that guarantee value for our clients. Every engagement is structured around clear deliverables with agreed acceptance criteria.</p>
       </div>
-      <div class="value-card">
+      <div class="card card-top-sky">
         <h3>Evidence-based</h3>
         <p>We combine user-oriented design, systems thinking, continuous improvement and iterative development. Every recommendation is grounded in data, not opinion.</p>
       </div>
-      <div class="value-card">
+      <div class="card card-top-green">
         <h3>Transparent by default</h3>
-        <p>Working openly with our customers — sharing progress, decisions and insights — we create a collaborative environment where ideas evolve quickly and risks surface early.</p>
+        <p>Working openly with our customers, sharing progress, decisions and insights, we create a collaborative environment where ideas evolve quickly and risks surface early.</p>
       </div>
-      <div class="value-card">
+      <div class="card card-top-navy">
         <h3>Right-sized expertise</h3>
-        <p>We develop specialised solutions that incorporate best practices and the latest technologies, tailored to address local contexts and delivery challenges. No unnecessary complexity.</p>
+        <p>We develop specialised solutions that incorporate best practices and the latest technologies, tailored to address local contexts and delivery challenges.</p>
       </div>
-      <div class="value-card">
+      <div class="card" style="border-top:4px solid var(--grey);">
         <h3>Deep domain knowledge</h3>
-        <p>Our subject matter experts bring 10–25 years of industry expertise across P3M, product and operational contexts, led by senior consultants who have worked at the heart of Civil Service delivery.</p>
+        <p>Our senior consultants bring 10 to 25 years of industry expertise across P3M, product and operational contexts, with genuine experience at the heart of HM Government delivery.</p>
       </div>
-      <div class="value-card">
+      <div class="card card-top-orange">
         <h3>Continuous innovation</h3>
-        <p>We don't just apply established frameworks — we combine them with advanced product-centric thinking to ensure best-fit solutions that address each client's unique setting.</p>
+        <p>We combine established frameworks with advanced product-centric thinking to ensure best-fit solutions that address each client's unique setting and challenges.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THREE PILLARS -->
-<section class="pillars-section">
-  <div class="wrap">
-    <div class="section-eyebrow">Our impact model</div>
-    <h2>Three pillars. One connected outcome.</h2>
-    <div class="pillars-grid" style="margin-top:32px;">
-      <div class="pillar-card">
-        <div class="pillar-from-label">Increase Transparency to</div>
-        <div class="pillar-arrow-big">↑</div>
-        <div class="pillar-to-label">Improve Understanding</div>
-        <p>The data we provide enables senior leaders to make confident, well-informed decisions, based upon verifiable data and meaningful insights.</p>
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-from-label">Increase Accountability to</div>
-        <div class="pillar-arrow-big">↑</div>
-        <div class="pillar-to-label">Improve Assurance</div>
-        <p>By inspiring confidence in teams and individuals, empowering them to own and embrace the challenges they face and the opportunities they can seize.</p>
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-from-label">Improve Performance to</div>
-        <div class="pillar-arrow-big">↑</div>
-        <div class="pillar-to-label">Increase Value</div>
-        <p>Which unblocks delivery and increases the flow of value across the organisation.</p>
-      </div>
+<!-- IMAGE BREAK -->
+<div style="position:relative;height:280px;overflow:hidden;">
+  <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&q=80" alt="Professional presenting data" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;">
+  <div style="position:absolute;inset:0;background:rgba(0,48,82,0.65);display:flex;align-items:center;justify-content:center;text-align:center;">
+    <div style="max-width:600px;padding:0 32px;">
+      <div class="section-eyebrow white" style="justify-content:center;">Increasing accountability to</div>
+      <h2 class="white" style="font-size:2rem;">Improve assurance across everything we deliver.</h2>
     </div>
   </div>
-</section>
+</div>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-main">
       <div class="footer-brand">
-        <div class="logo">
-          <div class="logo-badge"><span>23</span><span>00</span></div>
-          <span class="logo-name">TwentyThreeHundred</span>
-        </div>
+        <div style="font-weight:800;font-size:1.1rem;color:white;">TwentyThreeHundred</div>
         <p>Full-stack strategic planning, analytics and optimisation for large organisations, specialising in HM Government support.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
+        <a href="index.html">What we do</a>
         <a href="who-we-are.html">Who we are</a>
-        <a href="what-we-do.html">What we do</a>
         <a href="how-we-work.html">How we work</a>
         <a href="products-and-services.html">Products &amp; services</a>
         <a href="get-in-touch.html">Get in touch</a>
@@ -181,7 +137,10 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 TwentyThreeHundred Ltd · Company No. 11275805</span>
-      <span>Cheltenham &amp; London</span>
+      <div class="footer-cert">
+        <span class="cert-badge">Cyber Essentials Certified</span>
+        <span class="cert-badge">Cyber Essentials Plus Certified</span>
+      </div>
     </div>
   </div>
 </footer>

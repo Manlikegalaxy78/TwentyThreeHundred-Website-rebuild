@@ -9,8 +9,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  /* Upward trend pillar icons */
-  .pillar-icon-svg { width: 56px; height: 56px; margin: 0 auto 16px; }
+  /* Consistent pillar card styling */
+  .pillar-card-v4 {
+    border-radius: 4px;
+    padding: 32px 28px;
+    text-align: center;
+    border: 1px solid var(--line);
+    background: white;
+  }
+  .pillar-card-v4.navy-bg {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .pillar-card-v4.sky-bg {
+    background: var(--sky);
+    border-color: var(--sky-d);
+  }
+  .pillar-svg { margin: 0 auto 18px; }
+  .pillar-from-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; font-family: var(--font); }
+  .pillar-to-label { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 14px; font-family: var(--font); }
+  .pillar-card-v4.navy-bg .pillar-from-label { color: rgba(255,255,255,0.45); }
+  .pillar-card-v4.navy-bg .pillar-to-label { color: white; }
+  .pillar-card-v4.sky-bg .pillar-from-label { color: var(--navy-d); opacity: 0.6; }
+  .pillar-card-v4.sky-bg .pillar-to-label { color: var(--navy); }
+  .pillar-card-v4 p { font-size: 0.88rem; line-height: 1.65; font-family: var(--font); }
+  .pillar-card-v4.navy-bg p { color: rgba(255,255,255,0.68); }
+  .pillar-card-v4.sky-bg p { color: var(--navy-d); opacity: 0.78; }
+  .pillar-card-v4 p { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -28,21 +53,17 @@
       <a href="get-in-touch.html">Get in touch</a>
     </nav>
     <div class="logo-right">
-      <div class="logo-num"><span>23</span><span>00</span></div>
+      <div class="logo-right-text"><span>23</span><span>00</span></div>
     </div>
   </div>
 </header>
 <div class="accent-bar"></div>
 
-<!-- HERO IMAGE -->
-<div style="position:relative;height:360px;overflow:hidden;">
-  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&q=80" alt="Team working collaboratively" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,30,56,0.88) 0%,rgba(0,30,56,0.5) 60%,transparent 100%);display:flex;align-items:center;">
-    <div style="padding:0 40px;max-width:580px;">
-      <div class="page-eyebrow">How we work</div>
-      <h1 style="font-size:2.6rem;font-weight:800;line-height:1.08;letter-spacing:-0.025em;color:white;margin-bottom:16px;">Collaborative. Evidence-based. Transparent.</h1>
-      <p style="font-size:1rem;color:rgba(255,255,255,0.72);line-height:1.7;">Our approach is built around clear outcomes, shared accountability and a commitment to transparency that keeps every engagement on track and keeps our clients in control.</p>
-    </div>
+<div class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="page-eyebrow">How we work</div>
+    <h1>Collaborative, evidence-based and transparent</h1>
+    <p>Our approach is built around clear outcomes, shared accountability and a commitment to transparency that keeps every engagement on track and keeps our clients in control.</p>
   </div>
 </div>
 
@@ -50,127 +71,117 @@
 <section class="section-white">
   <div class="wrap">
     <div class="section-eyebrow">Our impact model</div>
-    <h2>Three pillars. One connected outcome.</h2>
+    <h2>Three pillars</h2>
     <div class="three-col" style="margin-top:36px;">
 
-      <div class="pillar-card">
-        <div style="display:flex;justify-content:center;margin-bottom:16px;">
+      <div class="pillar-card-v4">
+        <div class="pillar-svg">
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="32" r="30" fill="rgba(175,219,245,0.2)" stroke="#7BBFE8" stroke-width="2"/>
+            <circle cx="32" cy="32" r="30" fill="rgba(175,219,245,0.25)" stroke="#7BBFE8" stroke-width="2"/>
             <path d="M16 44 L24 32 L32 38 L44 20" stroke="#003052" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M40 20 H44 V24" stroke="#003052" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="44" cy="20" r="4" fill="#EA5B0C"/>
           </svg>
         </div>
-        <div class="pillar-from">Increase Transparency to</div>
-        <div class="pillar-to">Improve Understanding</div>
+        <div class="pillar-from-label">Increase Transparency to</div>
+        <div class="pillar-to-label">Improve Understanding</div>
         <p>The data we provide enables senior leaders to make confident, well-informed decisions, based upon verifiable data and meaningful insights.</p>
       </div>
 
-      <div class="pillar-card" style="background:var(--navy);border-color:var(--navy);">
-        <div style="display:flex;justify-content:center;margin-bottom:16px;">
+      <div class="pillar-card-v4 navy-bg">
+        <div class="pillar-svg">
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
             <circle cx="32" cy="32" r="30" fill="rgba(168,198,134,0.2)" stroke="#7EA85A" stroke-width="2"/>
-            <path d="M20 44 L28 34 L36 40 L48 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M44 22 H48 V26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="48" cy="22" r="4" fill="#EA5B0C"/>
-          </svg>
-        </div>
-        <div class="pillar-from" style="color:rgba(255,255,255,0.5);">Increase Accountability to</div>
-        <div class="pillar-to" style="color:white;">Improve Assurance</div>
-        <p style="color:rgba(255,255,255,0.65);">By inspiring confidence in teams and individuals, empowering them to own and embrace the challenges they face and the opportunities they can seize.</p>
-      </div>
-
-      <div class="pillar-card" style="background:var(--sky);border-color:var(--sky-d);">
-        <div style="display:flex;justify-content:center;margin-bottom:16px;">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="32" r="30" fill="rgba(0,48,82,0.1)" stroke="#003052" stroke-width="2"/>
-            <path d="M16 44 L26 30 L34 36 L48 18" stroke="#003052" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M44 18 H48 V22" stroke="#003052" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 44 L26 32 L34 38 L48 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M44 18 H48 V22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="48" cy="18" r="4" fill="#EA5B0C"/>
           </svg>
         </div>
-        <div class="pillar-from" style="color:var(--navy-d);opacity:0.65;">Improve Performance to</div>
-        <div class="pillar-to" style="color:var(--navy);">Increase Value</div>
-        <p style="color:var(--navy-d);opacity:0.75;">Which unblocks delivery and increases the flow of value across the organisation.</p>
+        <div class="pillar-from-label">Increase Accountability to</div>
+        <div class="pillar-to-label">Improve Assurance</div>
+        <p>By inspiring confidence in teams and individuals, empowering them to own and embrace the challenges they face and the opportunities they can seize.</p>
+      </div>
+
+      <div class="pillar-card-v4 sky-bg">
+        <div class="pillar-svg">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" fill="rgba(0,48,82,0.12)" stroke="#003052" stroke-width="2"/>
+            <path d="M14 46 L24 30 L33 37 L48 16" stroke="#003052" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M44 16 H48 V20" stroke="#003052" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="48" cy="16" r="4" fill="#EA5B0C"/>
+          </svg>
+        </div>
+        <div class="pillar-from-label">Improve Performance to</div>
+        <div class="pillar-to-label">Increase Value</div>
+        <p>Which unblocks delivery and increases the flow of value across the organisation.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- APPROACH PRINCIPLES -->
+<!-- FOUR PRINCIPLES - 2x2 grid, no numbering, no hero image -->
 <section class="section-grey">
   <div class="wrap">
-    <div class="two-col start">
-      <div>
-        <div class="section-eyebrow">Our approach</div>
-        <h2>Four principles that govern every engagement.</h2>
-        <p class="lead">These reflect how we actually work, embedded in our contracts, ways of working documentation and how we structure delivery with clients.</p>
-        <div style="display:flex;flex-direction:column;gap:14px;margin-top:28px;">
-          <div class="approach-card">
-            <h3>Delivery of Value</h3>
-            <p>Our services are structured around clear deliverables with agreed acceptance criteria, so our clients always know exactly what they are getting. We maintain a sharp focus on achieving results.</p>
-          </div>
-          <div class="approach-card sky">
-            <h3>Customer Collaboration</h3>
-            <p>We collaborate with customers to establish a shared vision, evaluate current conditions, and make incremental progress towards achieving that vision together.</p>
-          </div>
-          <div class="approach-card green">
-            <h3>Incremental Delivery</h3>
-            <p>Our approach integrates structured discovery with agile, value-driven releases that deliver benefit early and consistently throughout our involvement.</p>
-          </div>
-          <div class="approach-card navy">
-            <h3>Transparency</h3>
-            <p>Working openly with our customers, sharing progress, decisions and insights, we create a collaborative environment where risks surface early and ideas evolve quickly.</p>
-          </div>
-        </div>
+    <div class="section-eyebrow">Our approach</div>
+    <h2>Four principles that govern every engagement</h2>
+    <div class="two-by-two" style="margin-top:32px;">
+      <div class="approach-card">
+        <h3>Delivery of Value</h3>
+        <p>Our services are structured around clear deliverables with agreed acceptance criteria, so our clients always know exactly what they are getting. We maintain a sharp focus on achieving results.</p>
       </div>
-      <div>
-        <div class="img-block img-block-tall" style="margin-bottom:20px;">
-          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80" alt="Collaborative working session">
-        </div>
-        <div class="green-box">
-          <h3>Period-based delivery</h3>
-          <p>We plan and review in periods, agreed in advance. At the end of each period we review all completed items together, ensuring everything meets its agreed acceptance criteria before we move forward.</p>
-        </div>
+      <div class="approach-card sky">
+        <h3>Customer Collaboration</h3>
+        <p>We collaborate with customers to establish a shared vision, evaluate current conditions, and make incremental progress towards achieving that vision together.</p>
+      </div>
+      <div class="approach-card green">
+        <h3>Incremental Delivery</h3>
+        <p>Our approach integrates structured discovery with agile, value-driven releases that deliver benefit early and consistently throughout our involvement.</p>
+      </div>
+      <div class="approach-card navy">
+        <h3>Transparency</h3>
+        <p>Working openly with our customers, sharing progress, decisions and insights, we create a collaborative environment where risks surface early and ideas evolve quickly.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT TO EXPECT -->
+<!-- WHAT TO EXPECT - 3 cards, small orange lines only, no big lines, no junior consultant language -->
 <section class="section-navy">
   <div class="wrap">
     <div class="section-eyebrow light">What to expect from us</div>
-    <h2 class="white">What working with TwentyThreeHundred looks like.</h2>
+    <h2 class="white">What working with TwentyThreeHundred looks like</h2>
     <div class="three-col" style="margin-top:36px;">
-      <div class="card card-navy">
-        <div style="width:32px;height:3px;background:var(--orange);margin-bottom:18px;border-radius:2px;"></div>
-        <h3>Deliverables-based engagement</h3>
-        <p>Every engagement is structured around clear deliverables with agreed acceptance criteria, so you always know what you are paying for and what success looks like.</p>
+
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;padding:28px;">
+        <div style="width:28px;height:3px;background:var(--orange);margin-bottom:18px;border-radius:2px;"></div>
+        <h3 class="white">Deliverables-based engagement</h3>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.65;margin-top:8px;">Every engagement is structured around clear deliverables with agreed acceptance criteria, so you always know what you are paying for and what success looks like.</p>
       </div>
-      <div class="card card-navy" style="border-top:4px solid var(--sky-d);">
-        <div style="width:32px;height:3px;background:var(--sky-d);margin-bottom:18px;border-radius:2px;"></div>
-        <h3>HM Government-native experience</h3>
-        <p>Our founders and senior consultants have spent decades inside HM Government delivery. We understand the context, the governance and the constraints you work within.</p>
+
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;padding:28px;">
+        <div style="width:28px;height:3px;background:var(--sky-d);margin-bottom:18px;border-radius:2px;"></div>
+        <h3 class="white">HM Government-native experience</h3>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.65;margin-top:8px;">Our founders and senior consultants have spent decades inside HM Government delivery. We understand the context, the governance and the constraints you work within.</p>
       </div>
-      <div class="card card-navy" style="border-top:4px solid var(--green-d);">
-        <div style="width:32px;height:3px;background:var(--green-d);margin-bottom:18px;border-radius:2px;"></div>
-        <h3>Right-sized for your problem</h3>
-        <p>We are a right-sized enterprise, large enough to deliver, small enough to care. Senior people, hands-on throughout. No unnecessary overhead and no junior consultants left unsupervised.</p>
+
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;padding:28px;">
+        <div style="width:28px;height:3px;background:var(--green-d);margin-bottom:18px;border-radius:2px;"></div>
+        <h3 class="white">Right-sized for your problem</h3>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.65;margin-top:8px;">We are a right-sized enterprise, large enough to deliver, small enough to care. Senior people, hands-on throughout every engagement.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- IMAGE BREAK -->
+<!-- IMAGE BREAK - techy no people -->
 <div style="position:relative;height:260px;overflow:hidden;">
-  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1600&q=80" alt="Team in modern office" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;">
-  <div style="position:absolute;inset:0;background:rgba(168,198,134,0.7);display:flex;align-items:center;justify-content:center;text-align:center;">
-    <div style="max-width:560px;padding:0 32px;">
-      <div class="section-eyebrow" style="justify-content:center;color:var(--navy-d);">Improving performance to</div>
-      <h2 style="color:var(--navy);font-size:1.9rem;">Increase the flow of value across your organisation.</h2>
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=80" alt="Technology infrastructure" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;">
+  <div style="position:absolute;inset:0;background:rgba(168,198,134,0.75);display:flex;align-items:center;justify-content:center;text-align:center;">
+    <div style="max-width:600px;padding:0 32px;">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--navy);">Improving performance to</div>
+      <h2 style="color:var(--navy);font-size:1.9rem;">Increase the flow of value across your organisation</h2>
     </div>
   </div>
 </div>
@@ -180,7 +191,7 @@
   <div class="wrap">
     <div class="footer-main">
       <div class="footer-brand">
-        <div style="font-weight:800;font-size:1.1rem;color:white;">TwentyThreeHundred</div>
+        <div class="footer-brand-name">TwentyThreeHundred</div>
         <p>Full-stack strategic planning, analytics and optimisation for large organisations, specialising in HM Government support.</p>
       </div>
       <div class="footer-col">

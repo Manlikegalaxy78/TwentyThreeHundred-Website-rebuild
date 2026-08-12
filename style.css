@@ -132,7 +132,7 @@ nav a.active { color: white; border-bottom-color: white; }
   margin-bottom: 18px;
 }
 .page-eyebrow::before { content: ""; display: block; width: 28px; height: 2px; background: var(--orange); }
-.page-hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; max-width: 22ch; margin-bottom: 18px; }
+.page-hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; max-width: 55ch; margin-bottom: 18px; }
 .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 55ch; line-height: 1.75; }
 
 /* ── IMAGE HERO ─────────────────────────── */

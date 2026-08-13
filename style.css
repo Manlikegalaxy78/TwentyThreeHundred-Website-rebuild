@@ -175,6 +175,15 @@ nav a.active { color: white; border-bottom-color: white; }
 .section-eyebrow.white-ey { color: white; }
 .section-eyebrow.white-ey::before { background: white; }
 
+.banner-quote {
+  font-family: var(--font);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
 h2 { font-family: var(--font); font-size: 2rem; font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--navy); margin-bottom: 18px; }
 h2.white { color: white; }
 h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }

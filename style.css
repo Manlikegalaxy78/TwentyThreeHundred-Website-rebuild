@@ -370,3 +370,16 @@ footer { background: var(--navy-d); color: rgba(255,255,255,0.5); border-top: 4p
   nav a:not(.active) { display: none; }
   .lifecycle-circle::before { display: none; }
 }
+
+@media (max-width: 640px) {
+  nav a:not(.active) { display: none; }
+  .lifecycle-circle::before { display: none; }
+}
+
+header .wrap.header-inner {
+  max-width: 1160px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
